@@ -1,0 +1,10 @@
+" j,kによる上下スクロールの移動量を5倍に設定
+noremap j 5<C-e>
+noremap k 5<C-y>
+
+"Uで最近閉じたタブを表示
+map U :u<Space>
+
+"プライベートブラウジング
+map T :winopen -private 
+
