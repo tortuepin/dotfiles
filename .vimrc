@@ -30,3 +30,8 @@ set showmatch   "かっこ入力時の対応するかっこを表示
 set smartindent "オートインデント
 
 filetype plugin indent on
+
+"""""キーボード
+"escの代わりにcontrol+j
+imap <c-j> <esc>
+
