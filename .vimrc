@@ -6,7 +6,8 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-"""
+NeoBundle 'Shougo/neocomplcache'
+
 
 call neobundle#end()
 filetype plugin indent on
