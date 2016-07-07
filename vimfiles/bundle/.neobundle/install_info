@@ -1,2 +1,2 @@
 3.0
-{'neobundle.vim': {'checked_time': 1461552855, 'installed_uri': 'https://github.com/Shougo/neobundle.vim.git', 'installed_path': '/Users/suzukikohei/.vim/bundle/neobundle.vim', 'revisions': {}, 'updated_time': '1461276364'}}
+{'neocomplcache': {'checked_time': 1466348116, 'installed_uri': 'https://github.com/Shougo/neocomplcache.git', 'installed_path': '/Users/suzukikohei/.vim/bundle/neocomplcache', 'revisions': {'1429084618': '778181767467b8f8016828898779a646074d883a'}, 'updated_time': '1429084618'}, 'neobundle.vim': {'checked_time': 1461552855, 'installed_uri': 'https://github.com/Shougo/neobundle.vim.git', 'installed_path': '/Users/suzukikohei/.vim/bundle/neobundle.vim', 'revisions': {}, 'updated_time': '1461276364'}}
