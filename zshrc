@@ -1,3 +1,4 @@
+export PATH="/usr/local/Cellar/vim:$PATH"
 # Vi ライクな操作が好みであれば `bindkey -v` とする
 bindkey -v
 
