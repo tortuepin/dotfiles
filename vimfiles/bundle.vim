@@ -1,4 +1,3 @@
-
 """"""NeoBundle設定"""""""""""""""
 set nocompatible
 if has('vim_starting')
@@ -8,11 +7,13 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'cocopon/iceberg.vim'
 
 
 call neobundle#end()
 filetype plugin indent on
 """""""""""""""""""""""""""""""
+
 
 
 """""neocomplete"""""""""""

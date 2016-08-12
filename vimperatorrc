@@ -1,4 +1,4 @@
-" j,kによる上下スクロールの移動量を5倍に設定
+"j,kによる上下スクロールの移動量を5倍に設定
 noremap j 5<C-e>
 noremap k 5<C-y>
 
@@ -14,3 +14,12 @@ map <C-l> <C-PageDown>
 
 "escをC-jに
 map <C-j> <esc>
+
+" ヒントをアルファベットにする
+set hintchars=ifjklasdhguonmerwc
+
+
+" ヒントのフォントサイズを大きくする
+hi Hint z-index:5000; font-family:Menlo; font-size:14px; color:white; background-color:red; border-color:ButtonShadow; border-width:0px; border-style:solid; padding:0px 2px 0px 2px; position:absolute;
+
+
