@@ -98,7 +98,7 @@ function tmux_automatically_attach_session()
                         echo "$(tmux -V) attached session"
                         return 0
                     fi
-                elif [[ "$REPLY" =~ ^[0-9]+$ ]]; then
+                elif [[ "$REPLY" =~ ^[0-9a-zA-Z_]+$ ]]; then
                     tmux attach -t "$REPLY"
                     if [ $? -eq 0 ]; then
                         echo "$(tmux -V) attached session"
