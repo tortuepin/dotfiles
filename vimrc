@@ -12,7 +12,7 @@ set autoindent "改行時に前の行のインデントを継続する
 set smartindent "改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 set clipboard=unnamed,autoselect "クリップボード"
 syntax on
-
+set matchpairs& matchpairs+=<:>
 
 """""表示設定"""""""
 set number  "行番号の表示
@@ -27,13 +27,16 @@ filetype plugin indent on
 imap <c-j> <esc>
 set backspace=indent,eol,start
 
+""""検索設定
+vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v, '\/'), "\n", '\\n', 'g')<CR><CR>
+
 
 """"colorscheme
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermfg=8
 autocmd ColorScheme * highlight Underlined ctermbg=none
-autocmd ColorScheme * highlight ColorColumn ctermbg=none
+""autocmd ColorScheme * highlight ColorColumn ctermbg=none
 autocmd ColorScheme * highlight Error ctermbg=none
 autocmd ColorScheme * highlight Folded ctermbg=none
 autocmd ColorScheme * highlight NonText ctermbg=none

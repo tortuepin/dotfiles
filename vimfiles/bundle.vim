@@ -7,6 +7,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'cocopon/iceberg.vim'
 
 
@@ -66,3 +67,17 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
 " Shell like behavior(not recommended).
 "set completeopt+=longest
+"
+
+
+""jedi-vim
+
+autocmd FileType python setlocal omnifunc=jedi#completions
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+        let g:neocomplete#force_omni_input_patterns = {}
+endif
+
+let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
