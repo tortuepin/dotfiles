@@ -1,6 +1,7 @@
 source ~/dotfiles/vimfiles/bundle.vim
-
-
+syntax on
+filetype plugin on
+set t_Co=256
 
 
 
@@ -11,20 +12,26 @@ set softtabstop=4 "連続した空白に対してタブキーやバックスペ�
 set autoindent "改行時に前の行のインデントを継続する
 set smartindent "改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 set clipboard=unnamed,autoselect "クリップボード"
-syntax on
 set matchpairs& matchpairs+=<:>
+set wildmenu
+set wildmode=list:full
+set wildignore=*.o,*.obj,*.pyc,*.so,*.dll
+set mouse=a
+set ttymouse=xterm2
 
-"""""表示設定"""""""
+"""""表示設定""""""
 set number  "行番号の表示
-set title   "編集中のファイル名を表示
+set title   "編集中のファイル名を表示"
 set showmatch   "かっこ入力時の対応するかっこを表示
 set cursorline "選択した行を強調表示
-
-filetype plugin indent on
+set list
+set listchars=space:·
+set laststatus=2
+set statusline=%F
 
 """""キーボード
 "escの代わりにcontrol+j
-imap <c-j> <esc>
+noremap <c-j> <esc>
 set backspace=indent,eol,start
 
 """"検索設定

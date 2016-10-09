@@ -7,7 +7,14 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'davidhalter/jedi-vim'
+NeoBundleLazy "Shougo/unite.vim", {
+      \ "autoload": {
+      \   "commands": ["Unite", "UniteWithBufferDir"]
+      \ }}
+NeoBundleLazy "davidhalter/jedi-vim", {
+            \ "autoload": {
+            \   "filetypes": ["python", "python3", "djangohtml"],
+            \ }}
 NeoBundle 'cocopon/iceberg.vim'
 
 
@@ -81,3 +88,11 @@ if !exists('g:neocomplete#force_omni_input_patterns')
 endif
 
 let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+
+
+""Unite
+
+nmap <C-u> [unite]
+nnoremap [unite]<CR> :Unite 
+nnoremap [unite]<C-u> :Unite buffer<CR>
+nnoremap [unite]b :Unite buffer<CR>

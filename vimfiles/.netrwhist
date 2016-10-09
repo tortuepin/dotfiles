@@ -1,2 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/suzukikohei/dotfiles/tmuxinator'
+let g:netrw_dirhist_2='/Users/suzukikohei/dotfiles/vimfiles/ftplugin'
+let g:netrw_dirhist_3='/Users/suzukikohei/dotfiles/vimfiles'
+let g:netrw_dirhist_4='/Users/suzukikohei/dotfiles/vimfiles/ftplugin'
+let g:netrw_dirhist_5='/Users/suzukikohei/dotfiles/vimfiles/ftplugin/test'
+let g:netrw_dirhist_6='/Users/suzukikohei/develop/Pydledo'
