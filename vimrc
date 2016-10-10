@@ -31,7 +31,8 @@ set statusline=%F
 
 """""キーボード
 "escの代わりにcontrol+j
-noremap <c-j> <esc>
+inoremap <c-j> <esc>
+vnoremap <C-j> <esc>
 set backspace=indent,eol,start
 
 """"検索設定
