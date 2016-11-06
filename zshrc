@@ -1,4 +1,6 @@
-export PATH="/usr/local/Cellar/vim:$PATH"
+PATH="/usr/local/Cellar/vim:$PATH"
+PATH="$PATH:/$HOME/tool/pomodoro-python"
+export PATH
 
 # Vi ライクな操作が好みであれば `bindkey -v` とする
 bindkey -v
@@ -92,7 +94,7 @@ function tmux_automatically_attach_session()
             if tmux has-session >/dev/null 2>&1 && tmux list-sessions | grep -qE '.*]$'; then
                 # detached session exists
                 tmux list-sessions
-                echo -n "Tmux: attach? (y/N/num) "
+                echo -n "Tmux: attach? (y/n/num) "
                 read
                 if [[ "$REPLY" =~ ^[Yy]$ ]] || [[ "$REPLY" == '' ]]; then
                     tmux attach-session
@@ -100,6 +102,10 @@ function tmux_automatically_attach_session()
                         echo "$(tmux -V) attached session"
                         return 0
                     fi
+	    	
+		elif [[ "$REPLY" =~ ^[Nn]$ ]]; then
+		    return 0
+		
                 elif [[ "$REPLY" =~ ^[0-9a-zA-Z_]+$ ]]; then
                     tmux attach -t "$REPLY"
                     if [ $? -eq 0 ]; then

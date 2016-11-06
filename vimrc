@@ -3,6 +3,7 @@ syntax on
 filetype plugin on
 set t_Co=256
 
+command E e ++enc=euc-jp
 
 
 set expandtab "タブ入力を複数の空白入力に置き換える
