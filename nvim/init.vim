@@ -1,4 +1,5 @@
 set t_Co=256
+filetype plugin on
 
 ""keymap
 inoremap <c-j> <esc>
