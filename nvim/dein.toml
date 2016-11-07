@@ -1,3 +1,14 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+    nmap <c-u> [denite]
+    nnoremap [denite]<CR> :Denite 
+    nnoremap [denite]<c-u> :Denite line<CR>
+    nnoremap [denite]<c-f> :Denite file_rec<CR>
+'''
+
+
+
