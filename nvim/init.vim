@@ -29,7 +29,6 @@ set laststatus=2
 set statusline=%F
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
-colorscheme iceberg
 
 let s:dein_dir = expand('~/.config/nvim/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
@@ -60,3 +59,5 @@ endif
 if dein#check_install()
     call dein#install()
 endif
+
+colorscheme iceberg
