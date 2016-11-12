@@ -9,6 +9,13 @@ hook_add = '''
     nnoremap [denite]<c-u> :Denite buffer<CR>
     nnoremap [denite]<c-f> :Denite file_rec<CR>
 '''
+hook_post_source = '''
+    call denite#custom#map('insert', '<c-n>', 'move_to_next_line')
+    call denite#custom#map('insert', '<c-p>', 'move_to_prev_line')
+'''
+
 [[plugins]]
 repo = 'mrtazz/simplenote.vim'
 
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
