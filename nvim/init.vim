@@ -60,4 +60,27 @@ if dein#check_install()
     call dein#install()
 endif
 
+
+
+let s:true  = 1
+let s:false = 0
+
+let s:vimrc_plugin_on = get(g:, 'vimrc_plugin_on', s:true)
+
+if len(findfile(".development.vim", ".;")) > 0
+  let s:vimrc_plugin_on = s:false
+  "set runtimepath&
+  execute 'set runtimepath+=' . getcwd()
+  for plug in split(glob(getcwd() . "/*"), '\n')
+    execute 'set runtimepath+=' . plug
+  endfor
+endif
+
 colorscheme iceberg
+
+function! s:plugOff()
+    execute "set runtimepath&"
+    execute 'set runtimepath+=' . getcwd()
+endfunction
+command! Poff call s:plugOff()
+
