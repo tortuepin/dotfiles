@@ -27,8 +27,9 @@ set list
 set listchars=space:·
 set laststatus=2
 set statusline=%F
+nnoremap <ESC><ESC> :nohlsearch<CR>
 
-
+colorscheme iceberg
 
 
 let s:dein_dir = expand('~/.config/nvim/dein')
