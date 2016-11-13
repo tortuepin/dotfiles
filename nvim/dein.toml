@@ -19,3 +19,8 @@ repo = 'mrtazz/simplenote.vim'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'tortuepin/tomemo'
+if = '''g:vimrc_plugin_on == 1'''
+    

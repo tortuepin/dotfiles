@@ -1,3 +1,14 @@
+
+let s:true  = 1
+let s:false = 0
+
+let g:vimrc_plugin_on = get(g:, 'vimrc_plugin_on', s:true)
+
+if len(findfile(".development.vim", ".;")) > 0
+  let g:vimrc_plugin_on = s:false
+endif
+
+
 set t_Co=256
 filetype plugin on
 
@@ -62,13 +73,9 @@ endif
 
 
 
-let s:true  = 1
-let s:false = 0
-
-let s:vimrc_plugin_on = get(g:, 'vimrc_plugin_on', s:true)
 
 if len(findfile(".development.vim", ".;")) > 0
-  let s:vimrc_plugin_on = s:false
+  let g:vimrc_plugin_on = s:false
   "set runtimepath&
   execute 'set runtimepath+=' . getcwd()
   for plug in split(glob(getcwd() . "/*"), '\n')
@@ -78,9 +85,9 @@ endif
 
 colorscheme iceberg
 
-function! s:plugOff()
+function! PlugOff()
     execute "set runtimepath&"
     execute 'set runtimepath+=' . getcwd()
 endfunction
-command! Poff call s:plugOff()
+command! Poff call PlugOff()
 
