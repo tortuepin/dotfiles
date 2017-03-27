@@ -29,3 +29,6 @@ repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
