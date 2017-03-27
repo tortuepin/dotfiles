@@ -24,3 +24,5 @@ repo = 'cocopon/iceberg.vim'
 repo = 'tortuepin/tomemo'
 if = '''g:vimrc_plugin_on == 1'''
     
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
