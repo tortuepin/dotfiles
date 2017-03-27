@@ -26,3 +26,6 @@ if = '''g:vimrc_plugin_on == 1'''
     
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'zchee/deoplete-jedi'

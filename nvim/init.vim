@@ -41,6 +41,10 @@ set statusline=%F
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 
+"" deoplete
+let g:deoplete#enable_at_startup = 1
+
+
 let s:dein_dir = expand('~/.config/nvim/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
