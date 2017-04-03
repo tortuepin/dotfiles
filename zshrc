@@ -1,3 +1,5 @@
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 PATH="/usr/local/Cellar/vim:$PATH"
 PATH="$PATH:/$HOME/tool/pomodoro-python"
 export PATH
@@ -129,5 +131,5 @@ function tmux_automatically_attach_session()
 #tmux_automatically_attach_session
 
 source ~/.tmuxinator/tmuxinator.zsh
-
+zplug load
 alias vim='nvim'
