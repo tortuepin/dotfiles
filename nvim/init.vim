@@ -28,6 +28,7 @@ set smartindent "改行時に入力された行の末尾に合わせて次の行
 set wildmenu
 set wildmode=list:full
 set wildignore=*.o,*.obj,*.pyc,*.so,*.dll
+set clipboard+=unnamedplus
 
 
 ""display
