@@ -1,7 +1,8 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 PATH="/usr/local/Cellar/vim:$PATH"
-PATH="$PATH:/$HOME/tool/pomodoro-python"
+PATH="$PATH:/$HOME/tool/Edison/edison:"
+PATH="$PATH:/usr/local/texlive/2014/bin/x86_64-darwin/"
 export PATH
 
 # Vi ライクな操作が好みであれば `bindkey -v` とする
