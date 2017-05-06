@@ -2,6 +2,8 @@
 let s:true  = 1
 let s:false = 0
 
+let $PATH = "~/.pyenv/shims:".$PATH
+
 let g:vimrc_plugin_on = get(g:, 'vimrc_plugin_on', s:true)
 
 if len(findfile(".development.vim", ".;")) > 0
