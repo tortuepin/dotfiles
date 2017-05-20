@@ -1,3 +1,4 @@
+export LANG=ja_JP.UTF-8
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 PATH="/usr/local/Cellar/vim:$PATH"
@@ -5,8 +6,41 @@ PATH="$PATH:/$HOME/tool/Edison/edison:"
 PATH="$PATH:/usr/local/texlive/2014/bin/x86_64-darwin/"
 export PATH
 
-# Vi ライクな操作が好みであれば `bindkey -v` とする
+
+##### キーバインド
 bindkey -v
+bindkey "^j" vi-cmd-mode
+
+##### プロンプト設定
+VIMODE=''
+function zle-keymap-select zle-line-init { # 現在のモードを表示させる
+    case $KEYMAP in
+        vicmd)
+        VIMODE="NORMAL"
+        ;;
+        main|viins)
+        VIMODE="INSERT"
+        ;;
+    esac
+    RPROMPT=" -- ${VIMODE} -- [%~]"
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+PROMPT="%m:%n%% "
+PROMPT2="%_%% "
+SPROMPT="%r is correct? [n,y,a,e]: "
+RPROMPT="[%~]"
+
+
+##### コマンド履歴
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt hist_ignore_all_dups # 重複除去
+setopt hist_ignore_space # スペースで始まるコマンドは履歴に含めない
+setopt share_history # 履歴を共有する
+
 
 # 自動補完を有効にする
 # コマンドの引数やパス名を途中まで入力して <Tab> を押すといい感じに補完してくれる
@@ -44,11 +78,9 @@ setopt extended_glob
 
 # 入力したコマンドがすでにコマンド履歴に含まれる場合、履歴から古いほうのコマンドを削除する
 # コマンド履歴とは今まで入力したコマンドの一覧のことで、上下キーでたどれる
-setopt hist_ignore_all_dups
 
 # コマンドがスペースで始まる場合、コマンド履歴に追加しない
 # 例： <Space>echo hello と入力
-setopt hist_ignore_space
 
 # <Tab> でパス名の補完候補を表示したあと、
 # 続けて <Tab> を押すと候補からパス名を選択できるようになる
