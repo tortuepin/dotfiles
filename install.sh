@@ -1,9 +1,8 @@
 #!/bin/bash
+files=("zshrc" "zshenv" "tmux.conf")
+dir=`pwd`
 
-for f in .??*; do
-    [[ "$f" == ".git" ]] && continue
-    [[ "$f" == ".DS_Store" ]] && continue
-    [[ "$f" == ".gitignore" ]] && continue
-
-    echo "$f"
+for f in $files; do
+	ln -s $dir/$f ~/.$f
+	echo linked $dir/$f ~/.$f
 done
