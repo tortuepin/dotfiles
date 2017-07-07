@@ -47,9 +47,15 @@ zstyle ':completion:*:default' menu select=1
 
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
+case ${OSTYPE} in
+    darwin*)
+        alias ls='gls --color=auto'
+        alias vim='nvim'
+        ;;
+    linux*)
+        ;;
+esac
 
-alias ls='gls --color=auto'
 
 
 zplug load
-alias vim='nvim'
