@@ -56,6 +56,4 @@ case ${OSTYPE} in
         ;;
 esac
 
-
-
 zplug load
