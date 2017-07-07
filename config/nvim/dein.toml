@@ -1,0 +1,38 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+    nmap <c-u> [denite]
+    nnoremap [denite]<CR> :Denite 
+    nnoremap [denite]<c-u> :Denite buffer<CR>
+    nnoremap [denite]<c-f> :Denite file_rec<CR>
+'''
+hook_post_source = '''
+    call denite#custom#map('insert', '<c-n>', 'move_to_next_line')
+    call denite#custom#map('insert', '<c-p>', 'move_to_prev_line')
+'''
+
+[[plugins]]
+repo = 'mrtazz/simplenote.vim'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'tortuepin/tomemo'
+if = '''g:vimrc_plugin_on == 1'''
+    
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'lukaszkorecki/workflowish'
+
