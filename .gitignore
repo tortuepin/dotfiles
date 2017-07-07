@@ -1,2 +1,3 @@
 /vimfiles/bundle/*
 /nvim/dein/*
+/config/nvim/dein/*
