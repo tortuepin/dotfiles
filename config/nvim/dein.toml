@@ -21,6 +21,9 @@ repo = 'mrtazz/simplenote.vim'
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
+repo = 'aereal/vim-colors-japanesque'
+
+[[plugins]]
 repo = 'tortuepin/tomemo'
 if = '''g:vimrc_plugin_on == 1'''
     
