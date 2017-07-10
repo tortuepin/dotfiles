@@ -37,5 +37,5 @@ repo = 'zchee/deoplete-jedi'
 repo = 'thinca/vim-quickrun'
 
 [[plugins]]
-repo = 'lukaszkorecki/workflowish'
+repo = 'tortuepin/workflowish'
 
