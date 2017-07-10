@@ -1,4 +1,4 @@
-
+set termguicolors
 let s:true  = 1
 let s:false = 0
 
