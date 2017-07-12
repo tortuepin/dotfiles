@@ -7,36 +7,26 @@ let $PATH = "~/.pyenv/shims:".$PATH
 let g:vimrc_plugin_on = get(g:, 'vimrc_plugin_on', s:true)
 
 let s:searchpattern = '.development.vim'
-let s:splitpattern = '/'
-let s:nowdir = getcwd()
-let s:spliteddir = split(s:nowdir, s:splitpattern)
-let s:dirlen = len(s:spliteddir)
 
 function! s:isdirectry(pattern)
     return matchend(a:pattern, '/') == len(a:pattern)
 endfunction
-function! s:findRoot(pattern)
-    for i in range(s:dirlen)
-        let s:joineddir = join(s:spliteddir, s:splitpattern)
-        if s:isdirectry(a:pattern)
-            let s:ans = finddir(a:pattern, fnameescape(s:joineddir) . ";" )
-        else
-            let s:ans = findfile(a:pattern, fnameescape(s:joineddir) . ";" )
-        endif
-        if len(s:ans) > 0
-            return fnamemodify(s:ans, ":p:h")
-        endif
-        call remove(s:spliteddir, -1)
-    endfor
+function! s:findRoot(pattern, dir)
+    if s:isdirectry(a:pattern)
+        let s:ans = finddir(a:pattern, fnameescape(a:dir) . ";" )
+    else
+        let s:ans = findfile(a:pattern, fnameescape(a:dir) . ";" )
+    endif
+    if len(s:ans) > 0
+        return fnamemodify(s:ans, ":p:h")
+        break
+    endif
 endfunction
 
-"if len(findfile(".development.vim", ".;")) > 0
-let s:root = s:findRoot(s:searchpattern)
+let s:root = s:findRoot(s:searchpattern, getcwd())
 if len(s:root) > 1
   let g:vimrc_plugin_on = s:false
-  "execute 'set runtimepath+=' . getcwd()
   execute 'set runtimepath+=' . s:root
-  "for plug in split(glob(getcwd() . "/*"), '\n')
   for plug in split(glob(s:root . "/*"), '\n')
     execute 'set runtimepath+=' . plug
   endfor
