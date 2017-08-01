@@ -39,3 +39,5 @@ repo = 'thinca/vim-quickrun'
 [[plugins]]
 repo = 'tortuepin/workflowish'
 
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
