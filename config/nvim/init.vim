@@ -113,7 +113,7 @@ if g:vimrc_plugin_on == s:true
     endif
 endif
 
-set background=light
+set background=dark
 colorscheme solarized
 call togglebg#map('<F5>')
 
