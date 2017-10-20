@@ -7,6 +7,8 @@ case ${OSTYPE} in
         PATH="/usr/local/Cellar/vim:$PATH"
         PATH="$PATH:/$HOME/tool/Edison/edison:"
         PATH="$PATH:/usr/local/texlive/2014/bin/x86_64-darwin/"
+        export GOPATH=$HOME/develop/go
+        export PATH=$PATH:$GOPATH/bin
         ;;
     linux*)
         ;;
