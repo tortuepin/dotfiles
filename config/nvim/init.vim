@@ -114,8 +114,7 @@ if g:vimrc_plugin_on == s:true
 endif
 
 set background=dark
-colorscheme solarized
-call togglebg#map('<F5>')
+colorscheme onedark
 
 function! PlugOff()
     execute "set runtimepath&"
