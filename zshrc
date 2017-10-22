@@ -55,5 +55,6 @@ case ${OSTYPE} in
     linux*)
         ;;
 esac
-
+autoload -U promptinit; promptinit
+prompt pure
 zplug load

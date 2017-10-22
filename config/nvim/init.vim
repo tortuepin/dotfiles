@@ -117,6 +117,7 @@ endif
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 autocmd ColorScheme * highlight Normal guibg=#2d2d2d
+autocmd ColorScheme * highlight StatusLine guibg=#434343
 set background=dark
 colorscheme onedark
 
