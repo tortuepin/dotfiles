@@ -1,3 +1,4 @@
+" vim:set foldmethod=marker:
 let g:solarized_termcolors=16
 let g:solarized_termtrans=0
 let g:solarized_degrade=0
@@ -77,7 +78,7 @@ set statusline=%F
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 
-"" deoplete
+"" deoplete {{{
 if g:vimrc_plugin_on == s:true
     let g:deoplete#enable_at_startup = 1
 
@@ -112,8 +113,8 @@ if g:vimrc_plugin_on == s:true
         call dein#install()
     endif
 endif
-
-"" color
+" }}}
+"" color {{{
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 autocmd ColorScheme * highlight Normal guibg=#2d2d2d
@@ -126,6 +127,7 @@ function! PlugOff()
     execute 'set runtimepath+=' . getcwd()
 endfunction
 command! Poff call PlugOff()
+"}}}
 
 
 "" gtags
