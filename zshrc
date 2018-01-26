@@ -13,7 +13,7 @@ function zle-keymap-select zle-line-init { # 現在のモードを表示させ�
         VIMODE="INSERT"
         ;;
     esac
-    RPROMPT=" -- ${VIMODE} -- [%~]"
+    RPROMPT=" -- ${VIMODE} -- "
     zle reset-prompt
 }
 zle -N zle-line-init
