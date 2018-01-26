@@ -58,7 +58,7 @@ esac
 
 
 # zplug
-if [ ! -e "$HOME/.zplug/init.zsh" ]; then
+if [ ! -e "${ZPLUG_HOME:-${HOME}/.zplug}/init.zsh" ]; then
 #TODO this process should not do in here
     printf "Install zplug? [y/N]: "
     if read -q; then
@@ -66,8 +66,8 @@ if [ ! -e "$HOME/.zplug/init.zsh" ]; then
         curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
     fi
 fi
-if [ -e "$HOME/.zplug/init.zsh" ]; then
-    source ~/.zplug/init.zsh
+if [ -e "${ZPLUG_HOME:-${HOME}/.zplug}/init.zsh" ]; then
+    source ${ZPLUG_HOME:-${HOME}/.zplug}/init.zsh
 
     zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
