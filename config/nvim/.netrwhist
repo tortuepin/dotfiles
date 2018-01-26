@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/suzukikohei/develop/vplugin/workflowish/ftplugin'
+let g:netrw_dirhist_2='/Users/suzukikohei/develop/vplugin/workflowish/rplugin/python3/denite/kind/__pycache__'
+let g:netrw_dirhist_3='/Users/suzukikohei/develop/vplugin/workflowish/rplugin/python3/denite/kind'
