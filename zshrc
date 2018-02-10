@@ -84,3 +84,7 @@ if [ -e "${ZPLUG_HOME:-${HOME}/.zplug}/init.zsh" ]; then
     fi
     zplug load --verbose
 fi
+
+# zshfiles (自作関数とか)
+DEV_DIR=~/develop
+source ~/.zshfiles/dev.zsh

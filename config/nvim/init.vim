@@ -47,6 +47,7 @@ endif
 
 set t_Co=256
 filetype plugin on
+filetype indent on
 
 ""keymap
 inoremap <c-j> <esc>
