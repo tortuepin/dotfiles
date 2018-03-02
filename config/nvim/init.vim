@@ -79,7 +79,7 @@ set statusline=%F
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 
-"" deoplete {{{
+"" dein {{{
 if g:vimrc_plugin_on == s:true
     let g:deoplete#enable_at_startup = 1
 
