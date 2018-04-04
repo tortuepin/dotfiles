@@ -32,6 +32,12 @@ setopt hist_ignore_all_dups # 重複除去
 setopt hist_ignore_space # スペースで始まるコマンドは履歴に含めない
 setopt share_history # 履歴を共有する
 
+# コマンド履歴検索
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end
 
 ##### 自動補完
 autoload -U compinit; compinit
@@ -42,7 +48,7 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 
 setopt extended_glob
-
+setopt correct
 zstyle ':completion:*:default' menu select=1
 
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
@@ -89,3 +95,10 @@ fi
 DEV_DIR=~/develop
 source ~/.zshfiles/dev.zsh
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
+
+# rbenv
+eval "$(rbenv init -)"
