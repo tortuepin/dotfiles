@@ -93,7 +93,8 @@ fi
 
 # zshfiles (自作関数とか)
 DEV_DIR=~/develop
-source ~/.zshfiles/dev.zsh
+source ~/.zshfiles/init.zsh
+
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # nvm
