@@ -1,3 +1,6 @@
+if [ -e .zshlocalenv ]; then
+    source .zshlocalenv
+fi
 export LANG=ja_JP.UTF-8
 case ${OSTYPE} in
     darwin*)
@@ -12,3 +15,6 @@ case ${OSTYPE} in
         ;;
 esac
 export PATH
+
+
+export REQ_DIR=${REQ_DIR:-"~/hikikatari"}
