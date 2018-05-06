@@ -17,4 +17,4 @@ esac
 export PATH
 
 
-export REQ_DIR=${REQ_DIR:-"~/hikikatari"}
+export REQ_DIR=${REQ_DIR:-~/hikikatari}
