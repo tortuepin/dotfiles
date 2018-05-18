@@ -76,3 +76,11 @@ echo "and import license at Dropbox/licence.bettertouchtool"
 # xcode
 echo "install xcode on manual"
 echo "search in appstore"
+
+# todoist
+echo "install todoist on manual"
+echo "search in appstore"
+
+# line
+echo "install line on manual"
+echo "search in appstore"
