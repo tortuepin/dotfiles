@@ -98,9 +98,6 @@ source ~/.zshfiles/init.zsh
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-# rbenv
-eval "$(rbenv init -)"
-
 # pyenv
 eval "$(pyenv init -)"
 
