@@ -9,6 +9,10 @@ case ${OSTYPE} in
         PATH="$PATH:/usr/local/texlive/2014/bin/x86_64-darwin/"
         ;;
     linux*)
+        PATH="/now28/k.suzuki/usr/local/bin/mecab/bin:$PATH"
+        PATH="/now28/k.suzuki/usr/local/bin:$PATH"
+        alias mecab='mecab -d /now28/k.suzuki/usr/local/bin/mecab/lib/mecab/dic/mecab-ipadic-neologd/'
+        LD_LIBRARY_PATH="/now28/k.suzuki/usr/local/lib"
         ;;
 esac
 export PATH
