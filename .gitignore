@@ -1,2 +1,4 @@
 /vimfiles/bundle/*
 /nvim/dein/*
+/config/nvim/dein/*
+.DS_*

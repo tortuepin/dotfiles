@@ -1,0 +1,63 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+    nnoremap [denite]<CR> :Denite 
+    call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+    call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
+'''
+
+[[plugins]]
+repo = 'mrtazz/simplenote.vim'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'aereal/vim-colors-japanesque'
+
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+
+[[plugins]]
+repo = 'tortuepin/tomemo'
+if = '''g:vimrc_plugin_on == 1'''
+    
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'tortuepin/workflowish'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+
+[[plugins]]
+repo = 'zchee/deoplete-go'
+build = 'make'
+on_ft = 'go'
+depends = ['deoplete.nvim']
+hook_source = '''
+    let g:deoplete#sources#go#gocode_binary = $GOPATH . '/bin/gocode'
+    let g:deoplete#sources#go#align_class = 1
+    let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+    let g:deoplete#sources#go#package_dot = 1
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
