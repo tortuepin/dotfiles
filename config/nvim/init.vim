@@ -136,3 +136,6 @@ map <C-h> :Gtags -f %<CR>
 map <C-c> :GtagsCursor<CR>
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
+
+"" terminal
+tnoremap <C-j> <C-\><C-n>
