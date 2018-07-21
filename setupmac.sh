@@ -23,6 +23,9 @@ brew install dropbox
 # change toggle key
 brew cask install alfred
 
+# peco
+brew install peco
+
 # google日本語入力
 # preference > keybord > input source > +
 brew cask install google-japanese-ime
