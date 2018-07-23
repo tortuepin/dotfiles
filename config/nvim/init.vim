@@ -67,6 +67,9 @@ set wildmode=list:full
 set wildignore=*.o,*.obj,*.pyc,*.so,*.dll
 set clipboard+=unnamedplus
 
+" 貼り付けモードを自動で解除
+autocmd InsertLeave * set nopaste
+
 
 ""display
 set number  "行番号の表示
