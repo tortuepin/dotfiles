@@ -142,3 +142,9 @@ map <C-p> :cp<CR>
 
 "" terminal
 tnoremap <C-j> <C-\><C-n>
+
+
+"" ローカル設定の読み込み
+if filereadable(expand('~/.nvimlocal.vim'))
+    source ~/.nvimlocal.vim
+endif
