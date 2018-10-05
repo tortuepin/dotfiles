@@ -1,5 +1,5 @@
-if [ -e .zshlocalenv ]; then
-    source .zshlocalenv
+if [ -e ~/.zshlocalenv ]; then
+    source ~/.zshlocalenv
 fi
 export LANG=ja_JP.UTF-8
 case ${OSTYPE} in
