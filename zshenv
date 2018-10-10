@@ -1,5 +1,5 @@
-if [ -e .zshlocalenv ]; then
-    source .zshlocalenv
+if [ -e ~/.zshlocalenv ]; then
+    source ~/.zshlocalenv
 fi
 export LANG=ja_JP.UTF-8
 case ${OSTYPE} in
@@ -12,6 +12,10 @@ case ${OSTYPE} in
         export PATH=$PATH:$GOPATH/bin
         ;;
     linux*)
+        PATH="/now28/k.suzuki/usr/local/bin/mecab/bin:$PATH"
+        PATH="/now28/k.suzuki/usr/local/bin:$PATH"
+        alias mecab='mecab -d /now28/k.suzuki/usr/local/bin/mecab/lib/mecab/dic/mecab-ipadic-neologd/'
+        LD_LIBRARY_PATH="/now28/k.suzuki/usr/local/lib"
         ;;
 esac
 export PATH
