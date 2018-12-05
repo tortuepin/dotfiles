@@ -23,7 +23,6 @@ repo = 'joshdick/onedark.vim'
 
 [[plugins]]
 repo = 'tortuepin/tomemo'
-if = '''g:vimrc_plugin_on == 1'''
     
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
@@ -36,6 +35,7 @@ repo = 'thinca/vim-quickrun'
 
 [[plugins]]
 repo = 'tortuepin/workflowish'
+on_ft = 'wofl'
 
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
