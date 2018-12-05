@@ -14,36 +14,6 @@ let s:false = 0
 
 let $PATH = "~/.pyenv/shims:".$PATH
 
-let g:vimrc_plugin_on = get(g:, 'vimrc_plugin_on', s:true)
-
-let s:searchpattern = '.development.vim'
-
-function! s:isdirectry(pattern)
-    return matchend(a:pattern, '/') == len(a:pattern)
-endfunction
-function! s:findRoot(pattern, dir)
-    if s:isdirectry(a:pattern)
-        let s:ans = finddir(a:pattern, fnameescape(a:dir) . ";" )
-    else
-        let s:ans = findfile(a:pattern, fnameescape(a:dir) . ";" )
-    endif
-    if len(s:ans) > 0
-        return fnamemodify(s:ans, ":p:h")
-        break
-    endif
-endfunction
-
-let s:root = s:findRoot(s:searchpattern, getcwd())
-if len(s:root) > 1
-  let g:vimrc_plugin_on = s:false
-  execute 'set runtimepath+=' . s:root
-  for plug in split(glob(s:root . "/*"), '\n')
-    execute 'set runtimepath+=' . plug
-  endfor
-else
-  let g:vimrm_plugin_on = s:true
-endif
-
 
 set t_Co=256
 filetype plugin on
@@ -81,43 +51,71 @@ set laststatus=2
 set statusline=%F
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
+" pliugin周り
+let s:searchpattern = '.development.vim'
+
+function! s:isdirectry(pattern) "{{{
+    return matchend(a:pattern, '/') == len(a:pattern)
+endfunction "}}}
+function! s:findRoot(pattern, dir) "{{{
+    " patternがあるdirを探す
+    if s:isdirectry(a:pattern)
+        let s:ans = finddir(a:pattern, fnameescape(a:dir) . ";" )
+    else
+        let s:ans = findfile(a:pattern, fnameescape(a:dir) . ";" )
+    endif
+    if len(s:ans) > 0
+        return fnamemodify(s:ans, ":p:h")
+        break
+    endif
+endfunction "}}}
+
+let s:root = s:findRoot(s:searchpattern, getcwd())
 
 "" dein {{{
-if g:vimrc_plugin_on == s:true
-    let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 
 
-    let s:dein_dir = expand('~/.config/nvim/dein')
-    let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+let s:dein_dir = expand('~/.config/nvim/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-    if &runtimepath !~# '/dein.vim'
-        if !isdirectory(s:dein_repo_dir)
-            execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-            echo "cloned dein"
-        endif
-        execute "set runtimepath^=" . fnamemodify(s:dein_repo_dir, ':p')
+if &runtimepath !~# '/dein.vim'
+    if !isdirectory(s:dein_repo_dir)
+        execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+        echo "cloned dein"
     endif
+    execute "set runtimepath^=" . fnamemodify(s:dein_repo_dir, ':p')
+endif
 
 
-    if dein#load_state(s:dein_dir)
-        call dein#begin(s:dein_dir)
+if dein#load_state(s:dein_dir)
+    call dein#begin(s:dein_dir)
 
-        let g:rc_dir = expand("~/.config/nvim/")
-        let s:toml = g:rc_dir . 'dein.toml'
-        let s:lazy_toml = g:rc_dir . 'dein_lazy.toml'
+    let g:rc_dir = expand("~/.config/nvim/")
+    let s:toml = g:rc_dir . 'dein.toml'
+    let s:lazy_toml = g:rc_dir . 'dein_lazy.toml'
 
-        call dein#load_toml(s:toml, {'lazy': 0})
-        "call dein#load_toml(s:lazy_toml, {'lazy': 1})
+if len(s:root) > 1
+  " .development.vimがあったらそれを読み込んでrootをruntimepathに
+  let s:toml_dev = s:root . "/" . s:searchpattern
+  execute 'set runtimepath+=' . s:root
+  call dein#load_toml(s:toml_dev, {'lazy':0})
+else
+    call dein#load_toml(s:toml, {'lazy': 0})
+endif
+    "call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-        call dein#end()
-        call dein#save_state()
-    endif
+    call dein#end()
+    call dein#save_state()
+endif
 
-    if dein#check_install()
-        call dein#install()
-    endif
+if dein#check_install()
+    call dein#install()
 endif
 " }}}
+"
+
+
 "" color {{{
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
