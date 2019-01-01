@@ -61,3 +61,6 @@ hook_source = '''
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'previm/previm'

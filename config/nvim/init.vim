@@ -146,3 +146,6 @@ tnoremap <C-j> <C-\><C-n>
 if filereadable(expand('~/.nvimlocal.vim'))
     source ~/.nvimlocal.vim
 endif
+
+"" previm
+let g:previm_open_cmd = "open"
