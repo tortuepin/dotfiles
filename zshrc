@@ -102,8 +102,8 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 eval "$(pyenv init -)"
 
 # php
-export PATH="/usr/local/opt/php@7.1/bin:$PATH"
-export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
+export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
 
 # perl
 PATH="/Users/tortuepin/perl5/bin${PATH:+:${PATH}}"; export PATH;
