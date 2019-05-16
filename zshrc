@@ -18,10 +18,7 @@ function zle-keymap-select zle-line-init { # 現在のモードを表示させ�
 }
 zle -N zle-line-init
 zle -N zle-keymap-select
-PROMPT="%m:%n%% "
-PROMPT2="%_%% "
 SPROMPT="%r is correct? [n,y,a,e]: "
-RPROMPT="[%~]"
 
 
 ##### コマンド履歴
