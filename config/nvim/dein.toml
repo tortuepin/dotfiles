@@ -64,3 +64,15 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'previm/previm'
+
+[[plugins]]
+repo = 'thinca/vim-localrc'
+
+[[plugins]]
+repo = 'tortuepin/tolog'
+build = 'make clean;make'
+on_ft = 'markdown'
+
+[[plugins]]
+repo = 'tortuepin/tolog_deoplete_source'
+on_ft = 'markdown'
