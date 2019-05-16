@@ -22,6 +22,8 @@ filetype indent on
 ""keymap
 inoremap <c-j> <esc>
 vnoremap <c-j> <esc>
+cnoremap <c-p> <Up>
+cnoremap <c-n> <Down>
 set backspace=indent,eol,start
 
 
