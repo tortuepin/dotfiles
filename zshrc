@@ -4,20 +4,20 @@ bindkey "^j" vi-cmd-mode
 
 ##### プロンプト設定
 VIMODE=''
-function zle-keymap-select zle-line-init { # 現在のモードを表示させる
-    case $KEYMAP in
-        vicmd)
-        VIMODE="NORMAL"
-        ;;
-        main|viins)
-        VIMODE="INSERT"
-        ;;
-    esac
-    RPROMPT=" -- ${VIMODE} -- "
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
+#function zle-keymap-select zle-line-init { # 現在のモードを表示させる
+#    case $KEYMAP in
+#        vicmd)
+#        VIMODE="NORMAL"
+#        ;;
+#        main|viins)
+#        VIMODE="INSERT"
+#        ;;
+#    esac
+#    RPROMPT=" -- ${VIMODE} -- "
+#    zle reset-prompt
+#}
+#zle -N zle-line-init
+#zle -N zle-keymap-select
 SPROMPT="%r is correct? [n,y,a,e]: "
 
 
