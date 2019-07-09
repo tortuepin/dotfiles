@@ -76,3 +76,7 @@ on_ft = 'markdown'
 [[plugins]]
 repo = 'tortuepin/tolog_deoplete_source'
 on_ft = 'markdown'
+
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
