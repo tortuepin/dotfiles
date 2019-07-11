@@ -98,6 +98,6 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 # pyenv
 eval "$(pyenv init -)"
 
-if [ -e ~/.zshlocalenv ]; then
-    source ~/.zshlocalenv
+if [ -e ~/.zshlocalrc ]; then
+    source ~/.zshlocalrc
 fi
