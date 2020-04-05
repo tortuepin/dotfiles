@@ -17,3 +17,7 @@ export PATH
 
 
 export REQ_DIR=${REQ_DIR:-~/hikikatari}
+
+if [ -e ~/.zshlocalenv ]; then
+    source ~/.zshlocalenv
+fi
