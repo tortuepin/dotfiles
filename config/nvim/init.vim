@@ -151,3 +151,6 @@ endif
 
 "" previm
 let g:previm_open_cmd = "open"
+
+"" vim-go
+let g:go_template_autocreate = 0 " 新しいファイルを開いたときにテンプレートが入力された状態で開く(0:disable)

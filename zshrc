@@ -95,9 +95,17 @@ source ~/.zshfiles/init.zsh
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-# pyenv
-eval "$(pyenv init -)"
+## pyenv
+#eval "$(pyenv init -)"
+
+
+## anyenv
+
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
 
 if [ -e ~/.zshlocalrc ]; then
     source ~/.zshlocalrc
 fi
+
