@@ -74,8 +74,8 @@ endfunction "}}}
 
 let s:root = s:findRoot(s:searchpattern, getcwd())
 
-"" dein {{{
 let g:deoplete#enable_at_startup = 1
+"" dein {{{
 
 
 let s:dein_dir = expand('~/.config/nvim/dein')
@@ -144,13 +144,13 @@ map <C-p> :cp<CR>
 tnoremap <C-j> <C-\><C-n>
 
 
-"" ローカル設定の読み込み
-if filereadable(expand('~/.nvimlocal.vim'))
-    source ~/.nvimlocal.vim
-endif
-
 "" previm
 let g:previm_open_cmd = "open"
 
 "" vim-go
 let g:go_template_autocreate = 0 " 新しいファイルを開いたときにテンプレートが入力された状態で開く(0:disable)
+
+"" ローカル設定の読み込み
+if filereadable(expand('~/.nvimlocal.vim'))
+    source ~/.nvimlocal.vim
+endif
