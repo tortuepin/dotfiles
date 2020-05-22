@@ -101,8 +101,11 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 ## anyenv
 
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
+if type "anyenv" > /dev/null 2>&1; then
+    echo "read anyenv"
+    export PATH="$HOME/.anyenv/bin:$PATH"
+    eval "$(anyenv init -)"
+fi
 
 
 if [ -e ~/.zshlocalrc ]; then
