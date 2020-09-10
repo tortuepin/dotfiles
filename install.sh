@@ -1,5 +1,5 @@
 #!/bin/bash
-files=("zshrc" "zshenv" "zshfiles" "tmux.conf" "config/nvim")
+files=("zshrc" "zshenv" "zshfiles" "tmux.conf" "config/nvim" "ideavimrc")
 dir=`pwd`
 mkdir ~/.config
 for f in ${files[@]}; do

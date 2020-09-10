@@ -1,0 +1,11 @@
+"" keymap
+inoremap <c-j> <esc>
+vnoremap <c-j> <esc>
+cnoremap <c-p> <Up>
+cnoremap <c-n> <Down>
+
+
+"" phpstorm keymap
+
+nnoremap <C-O> :action Back<CR>
+nnoremap <C-I> :action Forward<CR>
