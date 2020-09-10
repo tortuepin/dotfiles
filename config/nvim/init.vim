@@ -20,7 +20,7 @@ filetype plugin on
 filetype indent on
 
 ""keymap
-inoremap <c-j> <esc>
+"inoremap <c-j> <esc>
 vnoremap <c-j> <esc>
 cnoremap <c-p> <Up>
 cnoremap <c-n> <Down>
