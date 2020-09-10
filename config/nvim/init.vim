@@ -24,10 +24,10 @@ inoremap <c-j> <esc>
 vnoremap <c-j> <esc>
 cnoremap <c-p> <Up>
 cnoremap <c-n> <Down>
+nnoremap <ESC><ESC> :nohlsearch<CR>
+
+
 set backspace=indent,eol,start
-
-
-
 set expandtab "タブ入力を複数の空白入力に置き換える
 set tabstop=4 "画面上でタブ文字が占める幅
 set shiftwidth=4 "自動インデントでずれる幅
@@ -51,7 +51,6 @@ set list
 set listchars=space:·
 set laststatus=2
 set statusline=%F
-nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " pliugin周り
 let s:searchpattern = '.development.vim'
