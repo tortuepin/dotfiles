@@ -57,8 +57,8 @@ repo = 'previm/previm'
 repo = 'thinca/vim-localrc'
 
 [[plugins]]
-repo = 'tortuepin/tolog'
-build = 'make clean;make'
+repo = 'tortuepin/tolog_new'
+build = 'make install'
 on_ft = 'markdown'
 
 [[plugins]]
