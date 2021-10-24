@@ -4,9 +4,11 @@ repo = 'tortuepin/tolog_new'
 build = 'make install'
 on_ft = 'markdown'
 
-[[plugins]]
-repo = 'tortuepin/tolog_deoplete_source'
-on_ft = 'markdown'
+# it's not work without setting.
+# it's bother for me.
+#[[plugins]]
+#repo = 'tortuepin/tolog_deoplete_source'
+#on_ft = 'markdown'
 
 [[plugins]]
 repo = 'tortuepin/tolog.nvim'
