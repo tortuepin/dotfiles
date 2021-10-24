@@ -1,60 +1,11 @@
 [[plugins]]
-repo = 'Shougo/dein.vim'
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add = '''
-    nnoremap [denite]<CR> :Denite 
-    call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
-    call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
-'''
-
-[[plugins]]
-repo = 'mrtazz/simplenote.vim'
-
-[[plugins]]
-repo = 'cocopon/iceberg.vim'
-
-[[plugins]]
-repo = 'aereal/vim-colors-japanesque'
-
-[[plugins]]
-repo = 'joshdick/onedark.vim'
-
-[[plugins]]
-repo = 'tortuepin/tomemo'
-    
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-
-[[plugins]]
-repo = 'zchee/deoplete-jedi'
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-
-[[plugins]]
-repo = 'tortuepin/workflowish'
-on_ft = 'wofl'
-
-[[plugins]]
-repo = 'altercation/vim-colors-solarized'
-
-[[plugins]]
 repo = 'Yggdroot/indentLine'
 
 [[plugins]]
-repo = 'fatih/vim-go'
-on_ft = 'go'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
-repo = 'previm/previm'
-
-[[plugins]]
 repo = 'thinca/vim-localrc'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
 
 [[plugins]]
 repo = 'tortuepin/tolog_new'
@@ -65,22 +16,11 @@ on_ft = 'markdown'
 repo = 'tortuepin/tolog_deoplete_source'
 on_ft = 'markdown'
 
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-
-[[plugins]]
-repo = 'elmcast/elm-vim'
-on_ft = 'elm'
-
-[[plugins]]
-repo = 'AlessandroYorba/Despacio'
-
-[[plugins]]
-repo = 'junegunn/goyo.vim'
-on_ft = 'markdown'
-
 [[plugins]]
 repo = 'tortuepin/tolog.nvim'
 build = 'make'
 on_ft = 'markdown'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
