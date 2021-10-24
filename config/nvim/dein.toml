@@ -72,3 +72,15 @@ repo = 'leafgarland/typescript-vim'
 [[plugins]]
 repo = 'elmcast/elm-vim'
 on_ft = 'elm'
+
+[[plugins]]
+repo = 'AlessandroYorba/Despacio'
+
+[[plugins]]
+repo = 'junegunn/goyo.vim'
+on_ft = 'markdown'
+
+[[plugins]]
+repo = 'tortuepin/tolog.nvim'
+build = 'make'
+on_ft = 'markdown'

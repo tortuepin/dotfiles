@@ -1,12 +1,4 @@
 " vim:set foldmethod=marker:
-let g:solarized_termcolors=16
-let g:solarized_termtrans=0
-let g:solarized_degrade=0
-let g:solarized_bold=0
-let g:solarized_underline=0
-let g:solarized_italic=0
-let g:solarized_contrast='normal'
-let g:solarized_visibility='low'
 
 "set termguicolors
 let s:true  = 1
@@ -86,8 +78,8 @@ if &runtimepath !~# '/dein.vim'
         echo "cloned dein"
     endif
     execute "set runtimepath^=" . fnamemodify(s:dein_repo_dir, ':p')
+    let g:dein#auto_recache = 1
 endif
-
 
 if dein#load_state(s:dein_dir)
     call dein#begin(s:dein_dir)
@@ -120,10 +112,11 @@ endif
 "" color {{{
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
-autocmd ColorScheme * highlight Normal guibg=#2d2d2d
-autocmd ColorScheme * highlight StatusLine guibg=#434343
-set background=dark
-colorscheme onedark
+"autocmd ColorScheme * highlight Normal guibg=#2d2d2d
+"autocmd ColorScheme * highlight StatusLine guibg=#434343
+"set background=dark
+"colorscheme onedark
+colorscheme despacio
 
 function! PlugOff()
     execute "set runtimepath&"
