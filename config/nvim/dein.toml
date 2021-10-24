@@ -1,12 +1,4 @@
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-
-[[plugins]]
-repo = 'thinca/vim-localrc'
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-
+## tolog
 [[plugins]]
 repo = 'tortuepin/tolog_new'
 build = 'make install'
@@ -21,6 +13,28 @@ repo = 'tortuepin/tolog.nvim'
 build = 'make'
 on_ft = 'markdown'
 
+
+## lsp関連
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+
+## colorscheme
 [[plugins]]
 repo = 'tomasr/molokai'
+
+
+## 他
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'thinca/vim-localrc'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
 
